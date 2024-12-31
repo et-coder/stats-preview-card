@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+    font-family: "Inter", serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(244, 38%, 16%);
+    width: 280px;
+    border-radius: 10px;
+}
+
+.hero-img {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.hero-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 56%, 41%, 0.6);
+    border-radius: 10px 10px 0 0;
+}
+
+.content {
+    padding: 1em 1.75em 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1em 0 0.5em;
+}
+
+h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.description {
+    font-size: 0.8rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+    margin-bottom: 2.5em;
+    line-height: 1.5;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.25em;
+}
+
+.stat span {
+    font-family: "Lexend Deca";
+    margin-top: 0.4em;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: block;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+    .container {
+        display: flex;
+        width: 600px;
+        flex-direction: row-reverse;
+    }
+
+    .hero-img {
+        flex: 45%;
+        justify-self: flex-end;
+        order: -1;
+    }
+
+    img,
+    .hero-img::after {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .description {
+        font-size: 0.6em;
+        text-align: left;
+    }
+
+    .body {
+        padding-right: 4em;
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content {
+        flex: 55%;
+        padding-right: 1em;
+    }
+
+    .stats {
+        flex-direction: row;
+    }
+
+    .stat {
+        font-size: 0.9rem;
+        text-align: left;
+        margin-right: 0.5em;
+    }
+
+    .stat span {
+        font-size: 0.5rem;
+    }
+
+    h1 {
+        text-align: left;
+    }
+}
