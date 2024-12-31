@@ -94,6 +94,7 @@ h1 span {
         display: flex;
         width: 600px;
         flex-direction: row-reverse;
+        padding-bottom: 1em;
     }
 
     .hero-img {
@@ -110,10 +111,11 @@ h1 span {
     .description {
         font-size: 0.6em;
         text-align: left;
+        margin-bottom: 4em;
     }
 
     .body {
-        padding-right: 4em;
+        padding-right: 3em;
     }
 
     img {
